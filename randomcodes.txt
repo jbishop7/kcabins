@@ -1,0 +1,29 @@
+<div class = "flex-table-container">
+<table class= "flex-table">
+    <tr>
+        <th class = "offer-icon"><img src = "./icons/1.png"/></th>
+        <th class = "offer-desc">dasdasd </th>
+    </tr>
+</table>
+
+<table class= "flex-table">
+    <tr>
+        <th class = "offer-icon"><img src = "./icons/1.png"/></th>
+        <th class = "offer-desc">dasdasd </th>
+    </tr>
+</table>
+
+<table class= "flex-table">
+    <tr>
+        <th class = "offer-icon"><img src = "./icons/1.png"/></th>
+        <th class = "offer-desc">dasdasd </th>
+    </tr>
+</table>
+
+<table class= "flex-table">
+    <tr>
+        <th class = "offer-icon"><img src = "./icons/1.png"/></th>
+        <th class = "offer-desc">dasdasd </th>
+    </tr>
+</table>
+</div>

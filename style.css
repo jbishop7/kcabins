@@ -1,0 +1,198 @@
+
+
+@font-face {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/barlow/v12/7cHpv4kjgoGqM7E_DMs5.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+*{
+    margin:0;
+    padding:0;
+}
+
+header, body, footer{
+    font-family: Barlow;
+    color: white;
+}
+
+#main{
+    background-color: black;
+    
+}
+
+
+ul#header-nav{
+    list-style-type: none;
+    overflow:hidden;
+    margin: 0;
+    padding:0;
+    background-color: #F6AA1C;
+}
+
+li.header-link{
+    float: right;
+    height: 100%;
+}
+
+li.header-title{
+    float:left;
+    display:block;
+    text-decoration: none;
+    text-align:center;
+    margin-left: calc(4% + 100px);
+    font-size: 20pt;
+    font-weight: bold;
+    margin-top:0.5em;
+}
+
+li.splurge{
+    font-size: 10pt;
+    font-style: italic;
+    margin-left:10px;
+    margin-top:2em;
+}
+
+li.header-link a{
+    color:black;
+    display:block;
+    text-decoration: none;
+    text-align:center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    margin-left:1em;
+    height: 100%;
+}
+
+li.header-link:hover{
+    background-color: #ffcb6b;
+    
+}
+
+#banner{
+    border-bottom: white solid 2px;
+    color: black;
+}
+
+img.banner-photo{
+    position:absolute;
+    top:0;
+    left:3%;
+    width: 100px;
+}
+
+.first-panel{
+    display:grid;
+    grid-template-areas:"overview overview overview slideshow slideshow";
+    grid-template-columns: minmax(0, 1fr) minmax(0,1fr) minmax(0,1fr) minmax(0, 1fr) minmax(0, 1fr);
+    /*border: 2px solid black;*/
+    margin-right: auto;
+    margin-left:auto;
+    margin-top: 2em;
+    width:90%;
+}
+
+.overview{
+    grid-area:overview;
+    background-color: #252525;
+    padding: 10px;
+    margin-right: 4%;
+}
+.slideshow{
+    grid-area:slideshow;
+    padding:20px;
+    background-color: #252525;
+    margin:auto;
+}
+
+.second-panel{
+    width: 90%;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top: 2em;
+    display:grid;
+    grid-template-areas:"offer offer offer offer calendar calendar";
+    grid-template-columns: minmax(0, 1fr) minmax(0,1fr) minmax(0,1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.offer{
+    grid-area:offer;
+    background-color: #252525;
+}
+
+.calendar{
+    grid-area:calendar;
+    background-color: #252525;
+    border: #aaaaaa 1px solid;
+    padding-left: 8px;
+    padding-right:8px;
+}
+
+.flex-table-container{
+    display:flex;
+}
+
+.flex-table{
+    width:25%;
+}
+
+.offer-icon{
+    width: 70px;
+    border:pink 1px solid;
+}
+
+.offer-desc{
+    border: green 1px solid;
+    text-align:left;
+    padding: 4px;
+}
+
+
+
+.third-panel{
+    width:90%;
+    margin-left: auto;
+    margin-right:auto;
+    color:black;
+    margin-top: 2em;
+}
+
+.folder-tab{
+    float:left;
+    display:block;
+    
+}
+
+.rates-container{
+    padding: 4px 4px 4px 4px;
+    width:8%;
+    background-color:#F6AA1C;
+}
+
+.rates-container>h6{
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+
+
+
+
+.mySlides{
+    display:none;
+}
+
+
+.fade {
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fadeIn {
+    from {opacity: .2}
+    to {opacity: 1}
+}
+
