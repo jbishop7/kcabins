@@ -4,7 +4,7 @@
     font-family: 'Barlow';
     font-style: normal;
     font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/barlow/v12/7cHpv4kjgoGqM7E_DMs5.woff2) format('woff2');
+    src: url(./IBMPlexSans-Regular.ttf) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
 
@@ -175,19 +175,35 @@ img.banner-photo{
 
 .third-panel{
     width:90%;
-    margin-left: auto;
     margin-right:auto;
+    margin-left:auto;
     color:black;
     margin-top: 2em;
+    display:grid;
+    grid-template-areas: 'cabins-header . . . coach-house-header . . .'
+    'cabins-info cabins-info cabins-info cabins-info coach-house-info coach-house-info coach-house-info coach-house-info';
+    grid-template-columns: minmax(0, 1fr) minmax(0,1fr) minmax(0,1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
 }
 
   
-.header-label{
-    background-color: #F6AA1C;
+#header-label{
+    background-color: #ffffff;
+    color: black;
     display: inline;
     overflow: hidden;
     padding: 1px 4px 1px 4px;
     border-bottom: 2px white solid;
+    grid-area: cabins-header
+
+}
+
+#header-coachhouse-label{
+    background-color: #252525;
+    display: inline;
+    overflow: hidden;
+    padding: 1px 4px 1px 4px;
+    border-bottom: 2px white solid;
+    grid-area: coach-house-header;
 }
 
 
@@ -225,4 +241,40 @@ img.banner-photo{
     margin-top: 2em;
     padding: 1em 1em 1em 1em;
 
+}
+
+.cabins-info-container{
+    background-color: white;
+    color: black;
+    font-size: 24px;
+    font-weight: 590;
+    margin-top: 2px;
+    padding: 0.5em 1em 0.5em 1em;
+    grid-area: cabins-info;
+    margin-right: 1em;
+}
+
+.coach-info-container{
+    background-color: #252525;
+    color: white;
+    font-size: 24px;
+    font-weight: 590;
+    margin-top: 2px;
+    padding: 0.5em 1em 0.5em 1em;
+    grid-area: coach-house-info;
+}
+
+
+.cabins-banner{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    display:flex;
+    justify-content: center;
+}
+
+.cabins-banner-photo{
+    display: block;
+    width: 50%;
+    aspect-ratio: 20/9;
 }
