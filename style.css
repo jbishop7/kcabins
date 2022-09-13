@@ -15,16 +15,20 @@
 
 header, body, footer{
     font-family: Barlow;
-    color: white;
+    color: black;
 }
 
 #main{
-    background-color: black;
+    background-color: white;
     
 }
 
 a:link{
     text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+    color: blue;
 }
 
 
@@ -121,7 +125,7 @@ img.banner-photo{
 
 .overview{
     grid-area:overview;
-    background-color: #252525;
+    background-color: white;
     padding: 10px;
     margin-right: 4%;
 }
@@ -140,16 +144,17 @@ img.banner-photo{
     display:grid;
     grid-template-areas:"offer offer offer offer amenities-blurb amenities-blurb";
     grid-template-columns: minmax(0, 1fr) minmax(0,1fr) minmax(0,1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    
 }
 
 .offer{
     grid-area:offer;
-    background-color: #252525;
+    background-color: #F6AA1C;
 }
 
 .amenities-blurb{
     grid-area:amenities-blurb;
-    background-color: #252525;
+    background-color: #F6AA1C;
     border-left: #aaaaaa 1px solid;
     padding-left: 8px;
     padding-right:8px;
@@ -178,10 +183,10 @@ img.banner-photo{
     margin-right:auto;
     margin-left:auto;
     color:black;
-    margin-top: 2em;
+    margin-top: 0em;
     display:grid;
-    grid-template-areas: 'cabins-header . . . coach-house-header . . .'
-    'cabins-info cabins-info cabins-info cabins-info coach-house-info coach-house-info coach-house-info coach-house-info';
+    grid-template-areas: 'cabins-header . . . . . coach-house-header .'
+    'cabins-info cabins-info cabins-info cabins-info cabins-info cabins-info coach-house-info coach-house-info';
     grid-template-columns: minmax(0, 1fr) minmax(0,1fr) minmax(0,1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
 }
 
@@ -191,19 +196,20 @@ img.banner-photo{
     color: black;
     display: inline;
     overflow: hidden;
-    padding: 1px 4px 1px 4px;
-    border-bottom: 2px white solid;
-    grid-area: cabins-header
-
+    padding: 1px 4px 0px 4px;
+    grid-area: cabins-header;
+    margin-bottom:-2px;
 }
 
 #header-coachhouse-label{
-    background-color: #252525;
+    background-color: white;
+    color: black;
     display: inline;
     overflow: hidden;
-    padding: 1px 4px 1px 4px;
-    border-bottom: 2px white solid;
+    padding: 1px 4px 0px 4px;
     grid-area: coach-house-header;
+    margin-bottom:-2px;
+
 }
 
 
@@ -231,6 +237,9 @@ img.banner-photo{
     from {opacity: .2}
     to {opacity: 1}
 }
+.orange{
+    color:#F6AA1C;
+}
 
 .book-it{
     font-size: 18px;
@@ -246,22 +255,28 @@ img.banner-photo{
 .cabins-info-container{
     background-color: white;
     color: black;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 590;
     margin-top: 2px;
     padding: 0.5em 1em 0.5em 1em;
     grid-area: cabins-info;
-    margin-right: 1em;
+    border: 2px solid black;
+    border-bottom:none;
+    border-left:none;
+    border-right:none;
 }
 
 .coach-info-container{
-    background-color: #252525;
-    color: white;
-    font-size: 24px;
+    background-color: white;
+    color: black;
+    font-size: 18px;
     font-weight: 590;
     margin-top: 2px;
     padding: 0.5em 1em 0.5em 1em;
     grid-area: coach-house-info;
+    border: 2px solid black;
+    border-right:none;
+    border-bottom:none;
 }
 
 
@@ -277,4 +292,188 @@ img.banner-photo{
     display: block;
     width: 50%;
     aspect-ratio: 20/9;
+}
+
+.contact-header{
+    font-size: 24pt;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.contact-content{
+    margin-top: 1em;
+    display:block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em 3em 1em 3em;
+    font-size: 14pt;
+    height:auto;
+}
+
+.generic-header{
+    font-size: 26pt;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.generic-content{
+    margin-top: 1em;
+    display:block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em 3em 1em 3em;
+    font-size: 14pt;
+    height:auto;
+}
+
+.contact-us-container{
+    display:grid;
+    grid-template-areas: "contact calendar";
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+    column-gap: 1em;
+}
+
+.calendar-area{
+    grid-area: calendar;
+}
+
+.contact-us-area{
+    grid-area:"contact";
+    border-right: 1px solid #F6AA1C;
+}
+.payment-area{
+    grid-area: "contact";
+    border-right: 1px solid #F6AA1C;
+}
+
+.vertical-divider{
+    grid-area: vertical-divider;
+    border-right: #F6AA1C solid 1px;
+}
+
+
+.modal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    max-height: 1000px;
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: auto;
+    height: 100%;
+}
+
+.modal-content-container{
+    width: 70%;
+    height: 78%;
+    margin:auto;
+    display: block;
+    border: 2px #F6AA1C solid;
+    background-color: #252525;
+    position: relative;
+}
+
+#last-photo{
+    background-color: white;
+    color: black;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    width: 50px;
+    display: block;
+    margin:auto;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    padding: 1em 0 1em 0;
+}
+
+#next-photo{
+    position:absolute;
+    right: 5px;
+    top: 50%;
+    background-color: white;
+    color: black;
+    display: block;
+    margin:auto;
+    font-size: 24px;
+    cursor: pointer;
+    width: 50px;
+    text-align: center;
+    padding: 1em 0 1em 0;
+}
+
+
+.gallery-container{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 10px 20px;
+    justify-content: flex-start;
+}
+
+.gallery-photo{
+    display: block;
+    order: 1;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #F6AA1C;
+    max-width: 100px;
+    max-height: 100px;
+    background-size: contains;
+    cursor: pointer;
+
+}
+
+.gallery-photo img{
+    width: 100px;
+    height: 100px;
+
+}
+
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.footer{
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: center;
+    gap: 0px 50px;
+    background-color: #F6AA1C;
+    border-top: white 2px solid;
+    margin-top: 2em;
+}
+
+.footer-text{
+    color: white;
 }
